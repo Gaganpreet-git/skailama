@@ -1,0 +1,32 @@
+.heading {
+  color: #1d1929;
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+
+.description {
+  color: #646464;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.18px;
+  max-width: 30rem;
+  
+}
+
+.image {
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 1.7rem;
+  overflow: hidden;
+  display: flex;justify-content: center;
+  align-items: center;
+  background-color: #F3E8FF;
+}
+
+.card {
+
+  padding: 4rem 1rem;
+  display: flex;
+  gap: 1rem;
+  text-align: left;
+}

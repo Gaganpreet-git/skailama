@@ -1,0 +1,61 @@
+.transcriptInput {
+  max-width: 1200px;
+  width: 90%;
+  padding: 20px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  min-height: 30rem;
+
+  color: #63635e;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 4rem;
+}
+
+.podcastDetails {
+  /* height: 100vh; */
+}
+
+.editBtn {
+  padding: 1rem 5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.cancelBtn {
+  padding: 1rem 5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #e01919;
+  border: 1px solid #e01919;
+  background: transparent;
+}
+.updateBtn {
+  padding: 1rem 5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-left: 2rem;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.btnContainer {
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+}
+
+.goBackBtn {
+  color: #1d1929;
+  font-weight: 600;
+  font-size: 4rem;
+  text-align: left;
+  display: inline;
+}

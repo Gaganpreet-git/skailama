@@ -1,0 +1,51 @@
+.ProjectCard {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1.5rem;
+  border: 1px solid #000;
+  border-radius: 2.6rem;
+  max-width: 45rem;
+}
+
+.projectDetails {
+  display: flex;
+  flex-direction: column;
+
+  align-items: start;
+}
+
+.lastEdited {
+  justify-self: end;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.projectImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 15rem;
+  font-weight: 700;
+  font-size: 7.8rem;
+  background-color: #f8a01d;
+  border-radius: 1.8rem;
+  color: #fff;
+}
+
+.projectName {
+  color: #7e22ce;
+  font-weight: 700;
+  font-size: 2.6rem;
+}
+
+.files {
+  color: #3c3c3c;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
