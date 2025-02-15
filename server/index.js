@@ -2,7 +2,7 @@ const app = require("./app");
 const connectDB = require("./db");
 const config = require("./config");
 
-const port = config.port || 3000;
+const port = config.port || 8082;
 
 const startServer = async () => {
   await connectDB();
