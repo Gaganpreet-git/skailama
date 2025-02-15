@@ -1,6 +1,6 @@
 import { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import styles from "./Register.module.css";
-import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -88,6 +88,10 @@ const Register = () => {
         <button type="submit" className={styles.button} disabled={loading}>
           {loading ? "Registering..." : "Register"}
         </button>
+
+        <p className={styles.loginText}>
+          Already have an account? <Link to="/login" className={styles.loginLink}>Login here</Link>
+        </p>
       </form>
     </div>
   );

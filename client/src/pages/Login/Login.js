@@ -1,6 +1,6 @@
 import { useState } from "react";
-import styles from "./Login.module.css"; 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import styles from "./Login.module.css";
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +9,6 @@ const Login = () => {
   });
 
   const navigate = useNavigate();
-
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -36,13 +35,12 @@ const Login = () => {
 
       const data = await response.json();
       console.log(data);
-      
+
       if (!data.user) {
         throw new Error(data.message || "Login failed");
       }
 
       localStorage.setItem("token", data.tokens.access.token);
-
       navigate("/");
     } catch (err) {
       setError(err.message);
@@ -56,7 +54,7 @@ const Login = () => {
       <form onSubmit={handleSubmit} className={styles.form}>
         <h2>Login</h2>
         {error && <p className={styles.error}>{error}</p>}
-        
+
         <input
           type="email"
           name="email"
@@ -80,6 +78,10 @@ const Login = () => {
         <button type="submit" className={styles.button} disabled={loading}>
           {loading ? "Logging in..." : "Login"}
         </button>
+
+        <p className={styles.registerText}>
+          Don't have an account? <Link to="/register" className={styles.registerLink}>Register here</Link>
+        </p>
       </form>
     </div>
   );

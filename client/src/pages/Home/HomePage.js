@@ -8,14 +8,24 @@ import TextInput from "../../components/TextInput/TextInput";
 import Modal from "../../components/Modal/Modal";
 import HeaderWrapper from "../../layouts/HeaderWrapper/HeaderWrapper";
 import moment from "moment";
-
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const [projects, setProjects] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [projectName, setProjectName] = useState("");
+  const navigate = useNavigate();
+
 
   useEffect(() => {
+
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login");
+      return;
+    }
+
+
     fetchProjects();
   }, []);
 
@@ -70,7 +80,6 @@ const HomePage = () => {
     }
   };
 
-  
   return (
     <div className={styles.homepage}>
       <HeaderWrapper>
@@ -84,12 +93,12 @@ const HomePage = () => {
             <div className={styles.projects}>
               {projects.map((project) => (
                 <div key={project.id}>
-                    <ProjectCard
-                      projectId={project._id}
-                      name={project.name}
-                      totalFiles={project.podcastsCount || 0}
-                      lastUpdated={moment(project.updatedAt).fromNow()}
-                    />
+                  <ProjectCard
+                    projectId={project._id}
+                    name={project.name}
+                    totalFiles={project.podcastsCount || 0}
+                    lastUpdated={moment(project.updatedAt).fromNow()}
+                  />
                 </div>
               ))}
             </div>
